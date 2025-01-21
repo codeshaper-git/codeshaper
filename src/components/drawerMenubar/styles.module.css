@@ -1,0 +1,19 @@
+.drawerLogo {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.listWrap {
+    width: 250px;
+    text-align: center;
+}
+
+.list {
+    background: #1553fe !important;
+    min-height: 100vh;
+    color: #fff;
+}

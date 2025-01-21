@@ -1,0 +1,35 @@
+.main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../../../public/images/banner/company.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.main span {
+    font-size: 28px;
+}
+
+.main h6 {
+    margin-top: 20px;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) { 
+    .main {
+        height: 300px;
+    }
+    .main span {
+        font-size: 13px;
+    }
+    
+    .main h6 {
+        font-size: 13px;
+    }
+}
