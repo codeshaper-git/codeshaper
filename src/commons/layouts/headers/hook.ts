@@ -1,7 +1,7 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export const useHeader = () => {
     const router = useRouter();
@@ -10,6 +10,13 @@ export const useHeader = () => {
     const toggleDrawer = () => { 
         router.push('/menubar');
     };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     const handleScroll = () => {
         if (window.scrollY > 50) {
@@ -21,7 +28,6 @@ export const useHeader = () => {
 
     return {
         isScrolled,
-        toggleDrawer,
-        handleScroll
+        toggleDrawer
     }
 }

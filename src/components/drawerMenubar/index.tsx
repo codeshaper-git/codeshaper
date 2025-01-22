@@ -33,7 +33,7 @@ export default function DrawerMenu() {
                         <ListItemButton onClick={() => selectMenu('/service')}>서비스소개</ListItemButton>
                     </ListItem>
                     <ListItem>
-                        <ListItemButton onClick={() => selectMenu('/inquire')}>문의하기</ListItemButton>
+                        <ListItemButton onClick={() => selectMenu('/contact')}>문의하기</ListItemButton>
                     </ListItem>
                 </List>
             </div>

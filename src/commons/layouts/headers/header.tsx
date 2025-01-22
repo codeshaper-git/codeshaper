@@ -9,14 +9,7 @@ import { useEffect, useState } from 'react';
 import { useHeader } from './hook';
 
 export default function LayoutHeader() { 
-    const { isScrolled, toggleDrawer, handleScroll } = useHeader();
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    const { isScrolled, toggleDrawer } = useHeader();
 
     return (
         <main className={`${styles.header} ${isScrolled ? styles.headerActive : ''}`}>
@@ -38,11 +31,8 @@ export default function LayoutHeader() {
             <div className={styles.linkWrap}>
                 <Link href="/company">
                     회사소개
-                </Link>
-                <Link href="/">
-                    서비스소개
-                </Link>
-                <Link href="/" className={styles.linkBtn}>
+                </Link> 
+                <Link href="/contact" className={styles.linkBtn}>
                     문의하기
                 </Link>
             </div>
